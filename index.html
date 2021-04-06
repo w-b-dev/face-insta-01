@@ -60,6 +60,7 @@
         });
     }
 </script>
+
 <h1>Facebook / Instagram integration</h1>
 
 <img width="100px" alt="Facebook / Instagram icon" src="android-chrome-512x512.png">
@@ -70,24 +71,8 @@
 </fb:login-button>
 
 <hr>
-<script>
-    // function checkLoginState() {
-    //     FB.getLoginStatus(function (response) {
-    //         statusChangeCallback(response);
-    //     });
-    // }
-    setInterval(() => {
-        FB.getLoginStatus(function (response) {
-            statusChangeCallback(response);
-        });
-    }, 5000)
-</script>
-<button onclick="console.log(window)">window</button>
-<code>
-    console.log(window)
-</code>
-<hr>
 
+<button onclick="FB.logout();">logout</button>
 
 </body>
 </html>
