@@ -6,6 +6,28 @@
     <link href="favicon.png" rel="icon">
 </head>
 <body>
+<h1>Facebook / Instagram integration</h1>
+
+<img alt="Facebook / Instagram icon" src="android-chrome-512x512.png">
+
+<fb:login-button
+        onlogin="checkLoginState();"
+        scope="public_profile,email">
+</fb:login-button>
+
+<hr>
+// FB.getLoginStatus(function (response) {
+// statusChangeCallback(response);
+// });
+
+<button onclick="console.log('special button')">Special button</button>
+// function checkLoginState() {
+// FB.getLoginStatus(function (response) {
+// statusChangeCallback(response);
+// });
+// }
+<hr>
+
 <script>
     window.fbAsyncInit = function () {
         FB.init({
@@ -30,24 +52,6 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
-</script>
-<h1>Facebook / Instagram integration</h1>
-
-<fb:login-button
-        scope="public_profile,email"
-        onlogin="checkLoginState();">
-</fb:login-button>
-<script>
-    FB.getLoginStatus(function (response) {
-        statusChangeCallback(response);
-    });
-
-
-    function checkLoginState() {
-        FB.getLoginStatus(function (response) {
-            statusChangeCallback(response);
-        });
-    }
 </script>
 </body>
 </html>
